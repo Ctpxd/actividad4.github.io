@@ -6,7 +6,7 @@ Aplicación web interactiva que implementa cuatro algoritmos de cifrado clásico
 
 **[Insertar aquí la URL de tu aplicación desplegada]**
 
-Ejemplo: `https://tu-usuario.github.io/cifrado-clasico/`
+Ejemplo: `https://ctpxd.github.io/actividad4.github.io/`
 
 ---
 
