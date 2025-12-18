@@ -6,7 +6,7 @@ Aplicación web interactiva que implementa cuatro algoritmos de cifrado clásico
 
 **https://ctpxd.github.io/actividad4.github.io/**
 
-Ejemplo: `https://ctpxd.github.io/actividad4.github.io/`
+
 
 ---
 
