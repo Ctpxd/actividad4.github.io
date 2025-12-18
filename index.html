@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas de Cifrado Clásico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Herramientas de Cifrado Clásico</h1>
+            <p>Cifra y descifra mensajes usando algoritmos criptográficos históricos</p>
+        </header>
+
+        <div class="info-section">
+            <h2>Sobre esta aplicación</h2>
+            <ul>
+                <li><strong>Cifrado César:</strong> Desplaza cada letra del alfabeto un número fijo de posiciones</li>
+                <li><strong>Cifrado Vigenère:</strong> Utiliza una palabra clave para crear múltiples desplazamientos</li>
+                <li><strong>Cifrado por Transposición Columnar:</strong> Reordena las letras según una clave numérica</li>
+                <li><strong>Cifrado Atbash:</strong> Invierte el alfabeto (A→Z, B→Y, etc.)</li>
+            </ul>
+        </div>
+
+        <div class="cipher-grid">
+            <!-- Cifrado César -->
+            <div class="cipher-card">
+                <h2>Cifrado César</h2>
+                <p>Desplaza cada letra del alfabeto un número determinado de posiciones.</p>
+                
+                <div class="input-group">
+                    <label for="caesar-text">Texto:</label>
+                    <textarea id="caesar-text" placeholder="Ingrese su mensaje aquí..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="caesar-key">Desplazamiento (0-25):</label>
+                    <input type="number" id="caesar-key" value="3" min="0" max="25">
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn-encrypt" onclick="caesarEncrypt()">Cifrar</button>
+                    <button class="btn-decrypt" onclick="caesarDecrypt()">Descifrar</button>
+                </div>
+                
+                <div class="input-group">
+                    <label>Resultado:</label>
+                    <div class="output-box" id="caesar-output">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+
+            <!-- Cifrado Vigenère -->
+            <div class="cipher-card">
+                <h2>Cifrado Vigenère</h2>
+                <p>Utiliza una palabra clave para crear múltiples desplazamientos César.</p>
+                
+                <div class="input-group">
+                    <label for="vigenere-text">Texto:</label>
+                    <textarea id="vigenere-text" placeholder="Ingrese su mensaje aquí..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="vigenere-key">Palabra Clave:</label>
+                    <input type="text" id="vigenere-key" value="CLAVE" placeholder="Solo letras">
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn-encrypt" onclick="vigenereEncrypt()">Cifrar</button>
+                    <button class="btn-decrypt" onclick="vigenereDecrypt()">Descifrar</button>
+                </div>
+                
+                <div class="input-group">
+                    <label>Resultado:</label>
+                    <div class="output-box" id="vigenere-output">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+
+            <!-- Cifrado por Transposición Columnar -->
+            <div class="cipher-card">
+                <h2>Transposición Columnar</h2>
+                <p>Reordena las letras del mensaje según el orden de una clave numérica.</p>
+                
+                <div class="input-group">
+                    <label for="columnar-text">Texto:</label>
+                    <textarea id="columnar-text" placeholder="Ingrese su mensaje aquí..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="columnar-key">Clave (números separados por comas, ej: 3,1,4,2):</label>
+                    <input type="text" id="columnar-key" value="3,1,4,2" placeholder="3,1,4,2">
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn-encrypt" onclick="columnarEncrypt()">Cifrar</button>
+                    <button class="btn-decrypt" onclick="columnarDecrypt()">Descifrar</button>
+                </div>
+                
+                <div class="input-group">
+                    <label>Resultado:</label>
+                    <div class="output-box" id="columnar-output">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+
+            <!-- Cifrado Atbash -->
+            <div class="cipher-card">
+                <h2>Cifrado Atbash</h2>
+                <p>Invierte el alfabeto: A↔Z, B↔Y, C↔X, etc. Es su propio inverso.</p>
+                
+                <div class="input-group">
+                    <label for="atbash-text">Texto:</label>
+                    <textarea id="atbash-text" placeholder="Ingrese su mensaje aquí..."></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn-encrypt" onclick="atbashTransform()">Cifrar / Descifrar</button>
+                </div>
+                
+                <div class="input-group">
+                    <label>Resultado:</label>
+                    <div class="output-box" id="atbash-output">El resultado aparecerá aquí...</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Proyecto de Criptografía Clásica | Desarrollado para fines educativos</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
