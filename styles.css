@@ -1,0 +1,233 @@
+/* =====================================================
+   RESET Y CONFIGURACIÓN GENERAL
+   ===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* =====================================================
+   SECCIÓN DE INFORMACIÓN
+   ===================================================== */
+.info-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+.info-section h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.info-section ul {
+    list-style-position: inside;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   GRID DE TARJETAS DE CIFRADO
+   ===================================================== */
+.cipher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.cipher-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.cipher-card:hover {
+    transform: translateY(-5px);
+}
+
+.cipher-card h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.cipher-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   GRUPOS DE ENTRADA
+   ===================================================== */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: 'Courier New', monospace;
+}
+
+/* =====================================================
+   BOTONES
+   ===================================================== */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-encrypt {
+    background: #667eea;
+    color: white;
+}
+
+.btn-encrypt:hover {
+    background: #5568d3;
+    transform: scale(1.02);
+}
+
+.btn-decrypt {
+    background: #764ba2;
+    color: white;
+}
+
+.btn-decrypt:hover {
+    background: #653d8a;
+    transform: scale(1.02);
+}
+
+/* =====================================================
+   CAJA DE SALIDA
+   ===================================================== */
+.output-box {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    min-height: 60px;
+    font-family: 'Courier New', monospace;
+    word-wrap: break-word;
+    color: #333;
+}
+
+/* =====================================================
+   PIE DE PÁGINA
+   ===================================================== */
+footer {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN - MÓVILES Y TABLETS
+   ===================================================== */
+@media (max-width: 768px) {
+    .cipher-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .cipher-card {
+        padding: 20px;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    header p {
+        font-size: 0.9em;
+    }
+    
+    .cipher-card h2 {
+        font-size: 1.5em;
+    }
+}
